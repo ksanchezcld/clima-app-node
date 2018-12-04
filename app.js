@@ -20,7 +20,7 @@ let getInfo = async(direccion) => {
         let coors = await lugar.getLugarLatLng(direccion);
         let temp = await clima.getClima(coors.lat, coors.lng);
 
-        return `El clima es ${ coors.direccion } es de ${temp}`
+        return `El clima en ${ coors.direccion } es de ${temp}`
 
     } catch (e) {
         return `No se pudo determinar el clima en ${ direccion }`
@@ -32,37 +32,3 @@ let getInfo = async(direccion) => {
 getInfo(argv.direccion)
     .then(mensaje => console.log(mensaje))
     .catch(e => console.log(e));
-
-
-
-
-
-
-
-
-
-
-
-//console.log(argv.direccion);
-
-
-/*
-let getInfo = async(direccion) => {
-
-    try {
-
-        let coors = await lugar.getLugarLatLng(direccion);
-        let temp = await clima.getClima(coors.lat, coors.lng);
-
-        return `El clima en ${ coors.direccion } es de ${ temp }`;
-
-    } catch (e) {
-        return `No se pudo determinar el clima en ${ direccion }`.red;
-    }
-}
-
-getInfo(argv.direccion)
-    .then(mensaje => console.log(mensaje))
-    .catch(e => console.log(e));
-
-*/

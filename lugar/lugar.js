@@ -35,43 +35,6 @@ module.exports = {
 
 
 
-
-
-/*
-
-const getLugarLatLng = async(direccion) => {
-
-    let encodedUrl = encodeURI(direccion)
-
-    let resp = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedUrl}&key=AIzaSyDyJPPlnIMOLp20Ef1LlTong8rYdTnaTXM`)
-
-    if (resp.data.status === 'ZERO_RESULTS') {
-        throw new Error(`No hay resultados para la ciudad ${ direccion }`.yellow);
-    }
-
-    //console.log(JSON.stringify(resp.data, undefined, 2));
-    let status = resp.status;
-    if (status === 200) {
-        console.log('================'.yellow);
-        console.log(' Status ==> OK'.rainbow);
-        console.log('================'.yellow);
-    }
-
-    let location = resp.data.results[0]
-    let coors = location.geometry.location;
-
-    return {
-        direccion: location.formatted_address,
-        latitud: coors.lat,
-        longitud: coors.lng
-    }
-
-}
-module.exports = {
-    getLugarLatLng
-}
-*/
-
 /*
 
 [RESULT OF console.log(resp.data);]
